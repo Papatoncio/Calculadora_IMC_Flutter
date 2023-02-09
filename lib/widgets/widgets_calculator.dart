@@ -92,7 +92,7 @@ class MyTable extends StatelessWidget {
           TableRow(
             children: const [Text('Puntaje'), Text('Categoría')],
             decoration: BoxDecoration(
-              color: Colors.red[100],
+              color: Colors.blue[100],
               border: Border.all(
                 width: 1,
                 color: Colors.black38,
@@ -104,57 +104,57 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: const [Text('Menor a 18.5'), Text('Peso Bajo')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
               )),
           TableRow(
-              children: [Text('18.6 a 24.9'), Text('Peso Normal')],
+              children: const [Text('18.6 a 24.9'), Text('Peso Normal')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
               )),
           TableRow(
-              children: [Text('25 a 29.9'), Text('Sobrepeso')],
+              children: const [Text('25 a 29.9'), Text('Sobrepeso')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
               )),
           TableRow(
-              children: [Text('30 a 34.9'), Text('Obesidad Leve')],
+              children: const [Text('30 a 34.9'), Text('Obesidad Leve')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
               )),
           TableRow(
-              children: [Text('35 a 39.9'), Text('Obesidad Media')],
+              children: const [Text('35 a 39.9'), Text('Obesidad Media')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
               )),
           TableRow(
-              children: [Text('Mayor a 40'), Text('Obesidad Morbida')],
+              children: const [Text('Mayor a 40'), Text('Obesidad Morbida')],
               decoration: BoxDecoration(
-                color: Colors.red[100],
+                color: Colors.blue[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
                 ),
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     bottomRight: Radius.circular(10)),
               )),
