@@ -14,13 +14,13 @@ class MyTextInput extends StatelessWidget {
     return SizedBox(
       width: 300,
       child: Padding(
-        padding: const EdgeInsets.only(left: 100, right: 70),
+        padding: const EdgeInsets.only(left: 50, right: 50),
         child: TextFormField(
           controller: inputController,
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             border: const UnderlineInputBorder(),
-            prefixIcon: const Icon(Icons.person),
+            prefixIcon: const Icon(Icons.health_and_safety_outlined),
             labelStyle: const TextStyle(fontSize: 18, color: Colors.black38),
             labelText: label,
           ),
@@ -74,7 +74,7 @@ class MyContainer extends StatelessWidget {
       height: 745,
       margin: const EdgeInsets.only(top: 0),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(19, 106, 198, 255).withOpacity(0.5),
+        color: Color.fromARGB(19, 106, 255, 176).withOpacity(0.5),
       ),
       child: child,
     );
@@ -90,21 +90,21 @@ class MyTable extends StatelessWidget {
       child: Table(
         children: [
           TableRow(
-            children: [Text('Puntaje'), Text('Categoría')],
+            children: const [Text('Puntaje'), Text('Categoría')],
             decoration: BoxDecoration(
-              color: Colors.greenAccent[100],
+              color: Colors.red[100],
               border: Border.all(
                 width: 1,
                 color: Colors.black38,
               ),
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10), topRight: Radius.circular(10)),
             ),
           ),
           TableRow(
-              children: [Text('Menor a 18.5'), Text('Peso Bajo')],
+              children: const [Text('Menor a 18.5'), Text('Peso Bajo')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
@@ -113,7 +113,7 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: [Text('18.6 a 24.9'), Text('Peso Normal')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
@@ -122,7 +122,7 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: [Text('25 a 29.9'), Text('Sobrepeso')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
@@ -131,7 +131,7 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: [Text('30 a 34.9'), Text('Obesidad Leve')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
@@ -140,7 +140,7 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: [Text('35 a 39.9'), Text('Obesidad Media')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,
@@ -149,7 +149,7 @@ class MyTable extends StatelessWidget {
           TableRow(
               children: [Text('Mayor a 40'), Text('Obesidad Morbida')],
               decoration: BoxDecoration(
-                color: Colors.greenAccent[100],
+                color: Colors.red[100],
                 border: Border.all(
                   width: 1,
                   color: Colors.black38,

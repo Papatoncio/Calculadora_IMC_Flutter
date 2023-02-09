@@ -11,15 +11,19 @@ class CalculatorUI extends StatefulWidget {
 class _CalculatorUIState extends State<CalculatorUI> {
   final TextEditingController _pesoController = TextEditingController();
   final TextEditingController _alturaController = TextEditingController();
-  String respuesta = 'Respuesta';
+  String resultado = 'Resultado';
   double imc = 0.0;
 
   void _calcular() {
     setState(() {
-      double peso = double.parse(_pesoController.text);
-      double altura = double.parse(_alturaController.text) / 100;
-      imc = peso / (altura * altura);
-      respuesta = imc.toStringAsFixed(1);
+      if (!(_pesoController.text == "" && _alturaController.text == "")) {
+        double peso = double.parse(_pesoController.text);
+        double altura = double.parse(_alturaController.text) / 100;
+        imc = peso / (altura * altura);
+        resultado = imc.toStringAsFixed(1);
+      } else {
+        resultado = "0.0";
+      }
     });
   }
 
@@ -27,7 +31,7 @@ class _CalculatorUIState extends State<CalculatorUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Mi Calculadora')),
+        title: const Center(child: Text('Calculadora IMC')),
         backgroundColor: Colors.amber,
       ),
       body: SingleChildScrollView(
@@ -35,12 +39,12 @@ class _CalculatorUIState extends State<CalculatorUI> {
           child: Column(
             children: [
               _sizeEspacio(),
-              MyTextInput(inputController: _pesoController, label: 'Peso Kg'),
+              MyTextInput(inputController: _pesoController, label: 'Peso (KG)'),
               _sizeEspacio(),
               MyTextInput(
-                  inputController: _alturaController, label: 'Altura Cm'),
+                  inputController: _alturaController, label: 'Altura (CM)'),
               _sizeEspacio(),
-              MyText(text: respuesta.toString()),
+              MyText(text: resultado.toString()),
               _sizeEspacio(),
               MyButton(
                   lblText: const Text('Calcular'), press: (() => _calcular())),
